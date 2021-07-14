@@ -1,0 +1,26 @@
+{
+  "name": "FishingCharterRater",
+  "version": "1.0.0",
+  "description": "Side project to expand my skills and rate some fishing charters located in the US",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pmarceaujr/FishingCharterRater.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pmarceaujr/FishingCharterRater/issues"
+  },
+  "homepage": "https://github.com/pmarceaujr/FishingCharterRater#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.2",
+    "nodemon": "^2.0.12"
+  }
+}
