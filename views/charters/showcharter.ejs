@@ -2,6 +2,8 @@
 <h1>Charter Details Page</h1>
 <h2><%=charter.name%></h2>
 <h3><%= charter.location %></h3>
+<img src="<%= charter.image%>" height="200" />
+<p><%=charter.description%></p>
 <footer>
   <a href="/charters/<%=charter._id%>/edit">Edit</a>
   <form action="/charters/<%=charter._id%>?_method=DELETE" method="POST">
