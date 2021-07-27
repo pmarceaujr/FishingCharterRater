@@ -1,12 +1,27 @@
 <% layout('layouts/boilerplate')%>
-<h1>Charter Details Page</h1>
-<h2><%=charter.name%></h2>
-<h3><%= charter.location %></h3>
-<img src="<%= charter.image%>" height="200" />
-<p><%=charter.description%></p>
-<footer>
-  <a href="/charters/<%=charter._id%>/edit">Edit</a>
-  <form action="/charters/<%=charter._id%>?_method=DELETE" method="POST">
-    <button>Delete</button>
-  </form>
-</footer>
+
+<div class="row">
+  <div class="col-6 offset-3">
+    <h1>Charter Details Page</h1>
+    <div class="card">
+      <div class="card">
+        <img src="<%= charter.image%>" class="card-img-top" alt="Charter Photo" />
+        <div class="card-body">
+          <h5 class="card-title"><%=charter.name%></h5>
+          <p class="card-text"><%=charter.description%></p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Location: <%= charter.location%></li>
+          <li class="list-group-item">Price: $<%= charter.price%></li>
+          <li class="list-group-item">Rating:</li>
+        </ul>
+        <div class="card-body justify-content-center">
+          <button class="card-link btn btn-warning d-inline"><a href="/charters/<%=charter._id%>/edit">Edit</a></button>
+          <form class="d-inline" action="/charters/<%=charter._id%>?_method=DELETE" method="POST">
+            <button class="btn btn-danger">Delete</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
