@@ -1,14 +1,48 @@
 <% layout('layouts/boilerplate')%>
-<h1>Edit a charter</h1>
-<form action="/charters/<%=charter._id%>?_method=PUT" method="POST">
-  <div>
-    <label for="charterName">Name</label>
-    <input type="text" id="charterName" name="charter[name]" value="<%=charter.name%>" />
+<div class="row">
+  <h1 class="text-center">Edit this charter</h1>
+  <div class="col-6 offset-3">
+    <form action="/charters/<%=charter._id%>?_method=PUT" method="POST">
+      <div class="mt-4">
+        <label class="form-label" for="charterName">Name</label>
+        <input class="form-control" type="text" id="charterName" name="charter[name]" value="<%=charter.name%>" />
+      </div>
+      <div class="mt-4">
+        <label class="form-label" for="charterLocation">Location</label>
+        <input
+          class="form-control"
+          type="text"
+          id="charterLocation"
+          name="charter[location]"
+          value="<%=charter.location%>"
+        />
+      </div>
+      <div class="mt-4">
+        <label class="form-label" for="charterImage">Image</label>
+        <input class="form-control" type="text" id="charterImage" name="charter[image]" value="<%=charter.image%>" />
+      </div>
+      <div class="mt-4">
+        <label class="form-label" for="charterPrice">Price</label>
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon1">$</span>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="0.00"
+            aria-label="charterPrice"
+            aria-describedby="basic-addon1"
+            name="charter[price]"
+            value="<%=charter.price%>"
+          />
+        </div>
+      </div>
+      <div class="mt-4">
+        <label class="form-label" for="charterDescription">Description</label>
+        <textarea class="form-control" type="text" id="charterDescription" name="charter[description]">
+<%=charter.description%></textarea
+        >
+      </div>
+      <button class="mt-4 btn btn-success">Update Charter</button>
+    </form>
   </div>
-  <div>
-    <label for="charterLocation">Location</label>
-    <input type="text" id="charterLocation" name="charter[location]" value="<%=charter.location%>" />
-  </div>
-  <button>Update Charter</button>
-</form>
-<a href="/charters/<%= charter._id%> ">Back To Charter</a>
+</div>
