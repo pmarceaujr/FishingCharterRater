@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Charter Details</title>
+  </head>
+  <body>
+    <h1>Charter Details Page</h1>
+    <h2><%=charter.name%></h2>
+    <h3><%= charter.location %></h3>
+    <footer>
+      <a href="/charters/<%=charter._id%>/edit">Edit</a>
+      <form action="/charters/<%=charter._id%>?_method=DELETE" method="POST">
+        <button>Delete</button>
+      </form>
+
+      <a href="/charters">All Charters</a>
+    </footer>
+  </body>
+</html>
